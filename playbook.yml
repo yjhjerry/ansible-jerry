@@ -1,0 +1,10 @@
+---
+- name: Install docker
+  hosts: gcp
+  become: true
+
+  tasks:
+    - name: "docker package is present"
+      apt: 
+        name: docker.io
+        state: latest
